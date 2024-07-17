@@ -1,10 +1,11 @@
 //api/signature-count/route.js 
-
 import { MongoClient } from 'mongodb';
 
+// Définissez votre URI MongoDB et les options de connexion
 const uri = process.env.MONGODB_URI;
 const options = {};
 
+// Initialisez le client MongoDB et clientPromise
 let client;
 let clientPromise;
 
@@ -29,7 +30,10 @@ export default async function handler(req, res) {
       const client = await clientPromise;
       const db = client.db('petition');
       const collection = db.collection('signatures');
+
+      // Comptez les documents dans la collection 'signatures'
       const count = await collection.countDocuments({});
+
       res.status(200).json({ count });
     } catch (error) {
       console.error('Failed to count signatures:', error);
@@ -40,3 +44,4 @@ export default async function handler(req, res) {
     res.status(405).json({ message: `Method ${req.method} Not Allowed` });
   }
 }
+
