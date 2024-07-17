@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('/public/fonts/style.css'); */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -14,6 +17,55 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+@font-face {
+  font-family: 'Aqmar';
+  src: url('/fonts/AqmarArabic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic';
+  src: url('/fonts/DINNext-Black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
 }
 
 body {
@@ -24,6 +76,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  text-align: right;
+  font-family: 'DIN Next Arabic', sans-serif;
+  font-weight: light;
 }
 
 @layer utilities {

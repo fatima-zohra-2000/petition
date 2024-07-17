@@ -1,0 +1,41 @@
+@font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-UltraLight.ttf') format('truetype');
+   font-weight: 200;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-Light.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-Regular.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-Medium.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-Bold.ttf') format('truetype');
+   font-weight: 600;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'DIN Next Arabic';
+   src: url('/fonts/DINNext-Black.ttf') format('truetype');
+   font-weight: 800;
+   font-style: normal;
+ }
