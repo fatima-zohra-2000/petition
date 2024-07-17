@@ -56,7 +56,7 @@ export default function PetitionForm() {
         <p className="text-3xl font-medium mb-4">تم إرسال توقيعكم بنجاح</p>
         <button 
           onClick={handleNewSubmission} 
-          className="mt-4 py-2 px-4 text-xl border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green hover:bg-brown focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown">
+          className="mt-4 py-2 px-4 text-xl border border-transparent rounded-md shadow-sm font-medium text-white bg-green hover:bg-brown focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown">
           إرسال توقيع آخر
         </button>
       </div>
@@ -72,16 +72,16 @@ export default function PetitionForm() {
           <div className="flex flex-wrap items-center sm:justify-between justify-center w-full sm:w-auto">
             <img src="/logo_unem.png" alt="Logo" className="w-16 mx-2 drop-shadow-lg" />
             <div className="mx-20 md:mx-4 lg:mx-6 text-center">
-              <p className="text-brown text-base/4 font-semibold mb-0 pb-0">الاتحاد الوطني لطلبة المغرب</p>
-              <p className="text-base mt-0 pt-0">الكتابة الوطنية</p>
+              <p className="text-gray-800 text-base/4 font-semibold mb-1 pb-0">الاتحاد الوطني لطلبة المغرب</p>
+              <p className="text-base/4 text-gray-800 mt-0 pt-0">الكتابة الوطنية</p>
             </div>
             <img src="/LOL.png" alt="New Image" className="w-24 hidden sm:block" />
           </div>
         </div>
         <div className="mb-20 text-center">
-          <h2 className="text-brown mt-6 mb-2 text-6xl/10 font-aqmar font-semibold">العريضة الطلابية الوطنية</h2>
+          <h2 className="text-brown mt-6 mb-2 text-7xl/10 font-aqmar font-semibold">العريضة الطلابية الوطنية</h2>
           <p className="green mt-5 text-3xl">
-            <span className="font-semibold text-green">لمناهضة التطبيع</span>
+            <span className="font-semibold text-green">لإسقاط التطبيع</span>
           </p>
         </div>
         <div className="max-w-md w-full mx-auto">
