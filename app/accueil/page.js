@@ -5,23 +5,46 @@ import Link from 'next/link';
 import axios from 'axios';
 
 export default function Home() {
+    // const [participantsCount, setParticipantsCount] = useState(0);
+
+    // useEffect(() => {
+    //     const fetchParticipantsCount = async () => {
+    //     try {
+    //         console.log('Fetching participants count...');
+    //         const response = await axios.get('/api/signature-count');
+    //         console.log('API response:', response.data);
+    //         if (response.data.count !== undefined) {
+    //         setParticipantsCount(response.data.count);
+    //         }
+    //     } catch (error) {
+    //         console.error('Erreur lors de la récupération du nombre de signatures : ', error);
+    //     }
+    //     };
+
+    //     fetchParticipantsCount();
+    // }, []);
+
     const [participantsCount, setParticipantsCount] = useState(0);
 
     useEffect(() => {
         const fetchParticipantsCount = async () => {
-        try {
-            console.log('Fetching participants count...');
-            const response = await axios.get('/api/signature-count');
-            console.log('API response:', response.data);
-            if (response.data.count !== undefined) {
-            setParticipantsCount(response.data.count);
+            try {
+                console.log('Fetching participants count...');
+                const response = await axios.get('/api/signature-count');
+                console.log('API response:', response.data);
+                if (response.data.count !== undefined) {
+                    setParticipantsCount(response.data.count);
+                }
+            } catch (error) {
+                console.error('Erreur lors de la récupération du nombre de signatures : ', error);
             }
-        } catch (error) {
-            console.error('Erreur lors de la récupération du nombre de signatures : ', error);
-        }
         };
 
         fetchParticipantsCount();
+
+        // Optionally set an interval to refresh the count periodically
+        const interval = setInterval(fetchParticipantsCount, 60000); // Refresh every 60 seconds
+        return () => clearInterval(interval);
     }, []);
 
   return (
